@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>GetGems | Premium NFT Marketplace on TON</title>
+    <meta name="description"
+        content="The largest NFT marketplace on TON. Explore, collect, and trade unique digital assets with ultra-fast animations.">
+    <meta name="keywords" content="NFT, TON, Blockchain, Web3, GetGems, Marketplace, GSAP">
+    <meta name="author" content="Antigravity Studio">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://getgems.io/">
+    <meta property="og:title" content="GetGems | Premium NFT Marketplace">
+    <meta property="og:description"
+        content="Explore the most unique NFT collections on TON. High performance, zero fees.">
+    <meta property="og:image" content="assets/images/hero.png">
+
+    <!-- Mobile Optimization -->
+    <meta name="theme-color" content="#080808">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="dark-theme">
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="loader-scanner"></div>
+            <div class="loader-text">INITIALIZING WEBCONTENT...</div>
+            <div class="loader-progress-container">
+                <div class="loader-progress-bar"></div>
+            </div>
+            <div class="loader-status">CONNECTING TO TON BLOCKCHAIN</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header glass">
+        <div class="container header-content">
+            <div class="logo-wrapper">
+                <a href="/" class="logo magnetic" id="main-logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="16" fill="url(#logo-grad)" />
+                        <path d="M16 8L22 14L16 20L10 14L16 8Z" fill="white" />
+                        <defs>
+                            <linearGradient id="logo-grad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#0088CC" />
+                                <stop offset="1" stop-color="#00F2FF" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="logo-text">getgems</span>
+                </a>
+            </div>
+
+            <div class="search-bar glass-input" id="search-container">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" placeholder="Search NFTs, Collections...">
+            </div>
+
+            <nav class="nav-links">
+                <a href="javascript:void(0)" class="nav-item">Gifts</a>
+                <a href="javascript:void(0)" class="nav-item">Stickers</a>
+                <a href="javascript:void(0)" class="nav-item">Explore</a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="wallet-status">$1.30</div>
+                <button class="btn btn-primary connect-btn magnetic" id="wallet-connect">Connect Wallet</button>
+                <button class="menu-btn" id="mobile-menu-trigger">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Live Feed Ticker -->
+        <div class="live-ticker-wrap glass">
+            <div class="live-ticker" id="ticker-timeline">
+                <div class="ticker-item"><span class="dot"></span> NFT #882 sold for 450 TON</div>
+                <div class="ticker-item"><span class="dot"></span> New Collection "Cyber Punks" listed</div>
+                <div class="ticker-item"><span class="dot"></span> Top Bid: 1,200 TON on Anonymous #44</div>
+                <div class="ticker-item"><span class="dot"></span> Floor Update: Cyber Elite +15%</div>
+                <div class="ticker-item"><span class="dot"></span> NFT #102 sold for 90 TON</div>
+            </div>
+        </div>
+
+        <div class="ticker-spacer"></div>
+
+        <!-- Background Decoration -->
+        <div class="bg-decoration">
+            <img src="assets/images/bg_spheres.png" alt="" class="bg-spheres">
+        </div>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-banners">
+                        <div class="banner-card banner-main glass-card">
+                            <div class="banner-content">
+                                <span class="badge">LAUNCHPAD</span>
+                                <h1 class="hero-title">NEXT-GEN DIGITAL ASSETS</h1>
+                                <p class="hero-subtitle">Discover the most unique NFT collections on TON. High
+                                    performance, zero fees, pure innovation.</p>
+                                <div class="hero-actions">
+                                    <button class="btn btn-primary btn-large">Explore Now</button>
+                                    <button class="btn btn-outline btn-large">Create Project</button>
+                                </div>
+                            </div>
+                            <div class="banner-visual">
+                                <img src="assets/images/hero.png" alt="Hero NFT" class="hero-float-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Collections Section -->
+        <section class="collections section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Top Collections</h2>
+                    <div class="time-filters glass-buttons">
+                        <button class="active">1 day</button>
+                        <button>7 days</button>
+                        <button>30 days</button>
+                        <button>All time</button>
+                    </div>
+                </div>
+
+                <div class="collections-grid">
+                    <!-- Collection Row 1 -->
+                    <div class="collection-row glass-card-hover" data-id="1">
+                        <div class="col-rank">1</div>
+                        <div class="col-info">
+                            <img src="assets/images/collection1.png" alt="" class="col-avatar">
+                            <div class="col-name-box">
+                                <span class="col-name">Cyber Apes Elite <span class="verified">✔</span></span>
+                                <span class="col-floor">Floor: 1,765 TON</span>
+                            </div>
+                        </div>
+                        <div class="col-stats">
+                            <div class="stat-item">
+                                <span class="stat-value"><span class="diamond">💎</span> 681.8K</span>
+                                <span class="stat-change positive">+75%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Collection Row 2 -->
+                    <div class="collection-row glass-card-hover" data-id="2">
+                        <div class="col-rank">2</div>
+                        <div class="col-info">
+                            <img src="assets/images/collection2.png" alt="" class="col-avatar">
+                            <div class="col-name-box">
+                                <span class="col-name">Neon Abstract Flux <span class="verified">✔</span></span>
+                                <span class="col-floor">Floor: 5.83 TON</span>
+                            </div>
+                        </div>
+                        <div class="col-stats">
+                            <div class="stat-item">
+                                <span class="stat-value"><span class="diamond">💎</span> 169.3K</span>
+                                <span class="stat-change positive">+30%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Collection Row 3 -->
+                    <div class="collection-row glass-card-hover" data-id="3">
+                        <div class="col-rank">3</div>
+                        <div class="col-info">
+                            <img src="assets/images/collection3.png" alt="TON DNS" class="col-avatar">
+                            <div class="col-name-box">
+                                <span class="col-name">TON DNS Domains <span class="verified">✔</span></span>
+                                <span class="col-floor">Floor: 0.5 TON</span>
+                            </div>
+                        </div>
+                        <div class="col-stats">
+                            <div class="stat-item">
+                                <span class="stat-value"><span class="diamond">💎</span> 14.2K</span>
+                                <span class="stat-change positive">+14%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Collection Row 4 -->
+                    <div class="collection-row glass-card-hover" data-id="4">
+                        <div class="col-rank">4</div>
+                        <div class="col-info">
+                            <img src="assets/images/collection4.png" alt="Plush Pepes" class="col-avatar">
+                            <div class="col-name-box">
+                                <span class="col-name">Plush Pepes <span class="verified">✔</span></span>
+                                <span class="col-floor">Floor: 8,850 TON</span>
+                            </div>
+                        </div>
+                        <div class="col-stats">
+                            <div class="stat-item">
+                                <span class="stat-value"><span class="diamond">💎</span> 8.6K</span>
+                                <span class="stat-change negative">-4%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Collection Row 5 -->
+                    <div class="collection-row glass-card-hover" data-id="5">
+                        <div class="col-rank">5</div>
+                        <div class="col-info">
+                            <img src="assets/images/collection5.png" alt="Toy Bears" class="col-avatar">
+                            <div class="col-name-box">
+                                <span class="col-name">Toy Bears <span class="verified">✔</span></span>
+                                <span class="col-floor">Floor: 43 TON</span>
+                            </div>
+                        </div>
+                        <div class="col-stats">
+                            <div class="stat-item">
+                                <span class="stat-value"><span class="diamond">💎</span> 3.3K</span>
+                                <span class="stat-change positive">+71%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="market-stats-row">
+                    <div class="m-stat glass">
+                        <span class="label">Volume 24h</span>
+                        <span class="value">2.4M TON</span>
+                    </div>
+                    <div class="m-stat glass">
+                        <span class="label">Sales 24h</span>
+                        <span class="value">12.8K</span>
+                    </div>
+                    <div class="m-stat glass">
+                        <span class="label">Active Users</span>
+                        <span class="value">45.2K</span>
+                    </div>
+                </div>
+
+                <div class="view-all-container">
+                    <button class="btn btn-secondary glass-cta magnetic">
+                        <span>See All Collections</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <path d="M9 18l6-6-6-6"></path>
+                        </svg>
+                    </button>
+                    <div class="cta-glow"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Auctions Section -->
+        <section class="auctions section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Top Auctions</h2>
+                    <button class="btn btn-outline btn-small">View All</button>
+                </div>
+                <div class="auctions-grid">
+                    <div class="auction-card glass-card">
+                        <div class="auction-image-box">
+                            <img src="assets/images/auction1.png" alt="Auction" class="auction-img">
+                            <div class="auction-timer">14h 22m 10s</div>
+                        </div>
+                        <div class="auction-details">
+                            <h3 class="auc-name">Anonymous Number #777</h3>
+                            <div class="auc-price">
+                                <span class="label">Current Bid</span>
+                                <span class="value">1,250 TON</span>
+                            </div>
+                            <button class="btn btn-primary bid-btn magnetic">Place Bid</button>
+                        </div>
+                    </div>
+                    <!-- Repeat for more cards -->
+                    <div class="auction-card glass-card">
+                        <div class="auction-image-box">
+                            <img src="assets/images/collection1.png" alt="Auction" class="auction-img">
+                            <div class="auction-timer">08h 10m 05s</div>
+                        </div>
+                        <div class="auction-details">
+                            <h3 class="auc-name">Cyber Ape Golden Edition</h3>
+                            <div class="auc-price">
+                                <span class="label">Current Bid</span>
+                                <span class="value">450 TON</span>
+                            </div>
+                            <button class="btn btn-primary bid-btn magnetic">Place Bid</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Section -->
+        <section class="featured section-padding">
+            <div class="container">
+                <div class="featured-grid">
+                    <div class="featured-card glass-card purple-glow">
+                        <div class="f-card-content">
+                            <h3>Save 30% on Stars</h3>
+                            <p>Buy Stars cheaper than inside Telegram</p>
+                            <button class="btn btn-warning">Get Stars</button>
+                        </div>
+                        <div class="f-card-icon">⭐</div>
+                    </div>
+                    <div class="featured-card glass-card pink-glow">
+                        <div class="f-card-content">
+                            <h3>Get Telegram Premium</h3>
+                            <p>Save 52% with yearly plan</p>
+                            <button class="btn btn-primary">Buy Premium</button>
+                        </div>
+                        <div class="f-card-icon">🚀</div>
+                    </div>
+                    <div class="featured-card glass-card cyan-glow">
+                        <div class="f-card-content">
+                            <h3>Create custom domain</h3>
+                            <p>Get your own domain on GetGems</p>
+                            <button class="btn btn-info">Create Domain</button>
+                        </div>
+                        <div class="f-card-icon">🌐</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trending Stickers Section -->
+        <section class="stickers section-padding">
+            <div class="container">
+                <div class="sticker-banner glass-card" id="sticker-promo">
+                    <div class="promo-text">
+                        <span class="badge">NEW ARRIVAL</span>
+                        <h2>Exclusive 3D Sticker Packs</h2>
+                        <p>Turn your Telegram chats into works of art with our new premium sticker collections.</p>
+                        <button class="btn btn-primary btn-large magnetic">Browse Stickers</button>
+                    </div>
+                    <div class="promo-visual">
+                        <img src="assets/images/stickers.png" alt="Stickers" class="stickers-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="16" fill="#0088CC" />
+                            <path d="M16 8L22 14L16 20L10 14L16 8Z" fill="white" />
+                        </svg>
+                        <span class="logo-text">getgems</span>
+                    </div>
+                    <p>The leading NFT marketplace on TON Blockchain. Fast, secure, and decentralized.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Marketplace</h4>
+                        <a href="#">Explore</a>
+                        <a href="#">Collections</a>
+                        <a href="#">Auctions</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Community</h4>
+                        <a href="#">Telegram</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Discord</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 GetGems. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Terms</a>
+                    <a href="#">Privacy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- GSAP Core & Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Observer.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

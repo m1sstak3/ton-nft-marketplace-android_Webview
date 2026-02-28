@@ -1,0 +1,25 @@
+{
+  "name": "getgems-nft-marketplace",
+  "version": "1.0.0",
+  "description": "High-performance Web3 NFT landing page optimized for Android WebView with GSAP animations.",
+  "main": "index.html",
+  "author": "Antigravity Studio",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "browser-sync start --server --files 'index.html, assets/css/*.css, assets/js/*.js'",
+    "build": "npx shx rm -rf www && npx shx mkdir www && npx shx cp index.html www/ && npx shx cp -r assets/ www/",
+    "sync": "npm run build && npx cap sync",
+    "android": "npm run sync && npx cap open android"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "shx": "^0.3.4"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.1.0",
+    "@capacitor/cli": "^8.1.0",
+    "@capacitor/core": "^8.1.0",
+    "@capacitor/status-bar": "^8.0.1"
+  }
+}
