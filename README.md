@@ -15,10 +15,9 @@
 
 ## 💻 Демонстрация интерфейса
 
-> 💡 **Заметка:** Прогони скриншот десктопной версии через Shots.so (выбери рамку браузера macOS/Safari) и вставь ссылку сюда!
-
 <div align="center">
-  <img src="https://via.placeholder.com/800x450/151B23/FFFFFF?text=Mockup:+Desktop+Browser+View" width="800" />
+  <b>🖥 Десктопная версия</b><br><br>
+  <img src="https://github.com/user-attachments/assets/d9a01c9c-5fa6-4356-8d63-8b475b66b89a" width="800" />
 </div>
 
 <br>
@@ -26,15 +25,22 @@
 <table align="center">
   <tr>
     <td align="center">
-      <b>📱 Мобильная адаптация</b><br>
-      <img src="https://via.placeholder.com/300x600/151B23/FFFFFF?text=Mockup:+Mobile+View" width="300" />
+      <b>📲 Планшет (Tablet)</b><br>
+      <img src="https://github.com/user-attachments/assets/2659bd84-42e8-41c7-aa76-e10a4a724684" width="350" />
     </td>
     <td align="center">
-      <b>✨ GSAP Анимации (GIF)</b><br>
-      <img src="https://via.placeholder.com/300x600/151B23/FFFFFF?text=GIF:+Scroll+Animations" width="300" />
+      <b>📱 Смартфон (Mobile)</b><br>
+      <img src="https://github.com/user-attachments/assets/d7107a7b-3708-4c3e-ad82-f56f5faf4ae0" width="350" />
     </td>
   </tr>
 </table>
+
+<br>
+
+<div align="center">
+  <h3>✨ GSAP Анимации скролла (Видео)</h3>
+  <video src="https://github.com/user-attachments/assets/2df72ab8-a1a3-4fe1-bdb4-0435db2b897b" width="600" autoplay loop muted playsinline style="border-radius: 20px;"></video>
+</div>
 
 ---
 
