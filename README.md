@@ -1,82 +1,96 @@
-# 💎 GetGems | Premium NFT Marketplace Landing Page
+<div align="center">
+  <h1>💎 GetGems – NFT Marketplace Landing Page</h1>
+  <p><b>Премиальный Web3-лендинг, спроектированный для идеальной интеграции и 60 FPS в Android WebView.</b></p>
 
-![Banner](assets/images/hero.png)
-
-> **High-performance, visually stunning Web3 landing page architected for perfect Android WebView encapsulation.** 
-
-This project demonstrates a fusion of cutting-edge GSAP animations and native-like mobile optimization. It isn't just a website; it's a **performance-first digital experience** designed to replicate the fluidity of high-end native Android applications.
-
----
-
-## 🚀 Vision & Key Features
-
-- **Performance-Driven Animations:** Orchestrated entry sequences and scroll-triggered reveals using **GSAP 3**.
-- **Android WebView Optimization:** Strategic use of GPU-accelerated properties (`transform` and `opacity`) to maintain a consistent **60 FPS** on mobile devices.
-- **Micro-Interactions:** Magnetic UI elements, interactive 3D tilts, and touch-normalized events using the GSAP `Observer` plugin.
-- **Zero-Dependency SplitText:** A custom, lightweight character-segmentation engine designed for immediate Largest Contentful Paint (LCP).
-- **Glassmorphism UI:** A sleek, dark-themed design system featuring blurred overlays and vibrant neon accents tailored for a "Dark Web3" aesthetic.
+  <div>
+    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+    <img src="https://img.shields.io/badge/GSAP_3-88CE02?style=for-the-badge&logo=greensock&logoColor=white" alt="GSAP" />
+    <img src="https://img.shields.io/badge/Capacitor-119EFF?style=for-the-badge&logo=capacitor&logoColor=white" alt="Capacitor" />
+  </div>
+</div>
 
 ---
 
-## 🛠 Technology Stack
+## 💻 Демонстрация интерфейса
 
-- **Foundational Layer:** Semantic HTML5, Vanilla CSS3 (Custom Variables), ES6+ JavaScript.
-- **Animation Orchestration:** [GSAP 3](https://gsap.com/) (GreenSock Animation Platform).
-- **Core Plugins:** `ScrollTrigger`, `Observer` (for cross-platform touch normalization).
-- **Mobile Bridge:** [Capacitor 6+](https://capacitorjs.com/) for native Android/iOS packaging.
-- **Workflow Tools:** `Browser-Sync` for real-time development, `shx` for cross-platform file management.
+> 💡 **Заметка:** Прогони скриншот десктопной версии через Shots.so (выбери рамку браузера macOS/Safari) и вставь ссылку сюда!
 
----
+<div align="center">
+  <img src="https://via.placeholder.com/800x450/151B23/FFFFFF?text=Mockup:+Desktop+Browser+View" width="800" />
+</div>
 
-## 🏗 Architectural Philosophy
+<br>
 
-The development followed a "WebView-First" approach:
-1. **GPU Compositing:** Aggressive use of `will-change` to offload rendering to the hardware layer.
-2. **Event Normalization:** Solved the common WebView touch-handling inconsistency by implementing a unified pointer-to-touch abstraction.
-3. **Minimize Reflow:** Zero animations on layout-impacting properties (top/left/margin) to prevent UI stuttering during complex transitions.
-4. **Adaptive Logic:** Implemented `gsap.matchMedia()` to handle breakpoints and user physics (touch vs mouse) seamlessly.
-
----
-
-## 📦 Local Installation & Setup
-
-1. **Clone & Enter:**
-   ```bash
-   git clone https://github.com/m1sstak3/ton-nft-marketplace.git
-   cd ton-nft-marketplace
-   ```
-
-2. **Install Dev Dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Development Mode:**
-   ```bash
-   npm start
-   ```
-
-4. **Build & Prepare for Android:**
-   ```bash
-   # Build the web project and sync with Capacitor
-   npm run build
-   npm run sync
-   
-   # Open in Android Studio
-   npm run android
-   ```
+<table align="center">
+  <tr>
+    <td align="center">
+      <b>📱 Мобильная адаптация</b><br>
+      <img src="https://via.placeholder.com/300x600/151B23/FFFFFF?text=Mockup:+Mobile+View" width="300" />
+    </td>
+    <td align="center">
+      <b>✨ GSAP Анимации (GIF)</b><br>
+      <img src="https://via.placeholder.com/300x600/151B23/FFFFFF?text=GIF:+Scroll+Animations" width="300" />
+    </td>
+  </tr>
+</table>
 
 ---
 
-## 📜 Metadata & Documentation
+## 🚀 Концепция и ключевые особенности
 
-Detailed technical specifications and development workflows can be found in the [docs/](docs/) directory.
+Этот проект — не просто веб-сайт, а **performance-first цифровой опыт**, где передовые анимации GSAP сочетаются с нативной мобильной оптимизацией.
 
-- **Developer:** [Antigravity Studio](https://github.com/m1sstak3)
-- **License:** [MIT](LICENSE)
-- **Year:** 2026
+* ⚡ **Производительные анимации:** Сложные сценарии появления элементов и скролл-эффекты на базе **GSAP 3**.
+* 📱 **Оптимизация под WebView (60 FPS):** Стратегическое использование аппаратно-ускоренных CSS-свойств (`transform` и `opacity`) для идеально плавной работы на Android-устройствах.
+* 🎯 **Микроинтеракции:** Магнитные UI-элементы, интерактивные 3D-наклоны и нормализация touch-событий через плагин GSAP `Observer`.
+* 🔠 **Кастомный SplitText:** Легковесный движок сегментации текста без лишних зависимостей, созданный для мгновенной отрисовки (LCP).
+* 🔮 **Glassmorphism UI:** Стильная темная дизайн-система с эффектом матового стекла и неоновыми акцентами в эстетике «Dark Web3».
 
 ---
 
-*Built with passion for the TON ecosystem and high-performance Web XR.*
+## 🏗 Архитектура и под капотом (WebView-First)
 
+Разработка велась с упором на максимальную производительность в мобильных веб-контейнерах:
+
+1. **GPU-композитинг:** Агрессивное использование `will-change` для переноса тяжелого рендеринга на аппаратный уровень.
+2. **Нормализация событий:** Решена проблема нестабильного поведения тапов в WebView через единую абстракцию pointer-to-touch.
+3. **Минимизация Reflow:** Полный отказ от анимации свойств, влияющих на геометрию страницы (top/left/margin), во избежание фризов интерфейса.
+4. **Адаптивная логика:** Использование `gsap.matchMedia()` для бесшовного переключения между брейкпоинтами и физикой устройств (мышь vs тачскрин).
+
+---
+
+## 📦 Локальная установка и запуск
+
+### 1. Подготовка
+Склонируйте репозиторий и установите зависимости:
+```bash
+git clone [https://github.com/m1sstak3/ton-nft-marketplace.git](https://github.com/m1sstak3/ton-nft-marketplace.git)
+cd ton-nft-marketplace
+npm install
+```
+
+### 2. Режим разработки
+Запуск локального сервера (`Browser-Sync`) с Hot Reload:
+```bash
+npm start
+```
+
+### 3. Сборка для Android (Capacitor)
+```bash
+# Сборка веб-проекта и синхронизация с Capacitor
+npm run build
+npm run sync
+
+# Открытие проекта в Android Studio
+npm run android
+```
+
+---
+
+<div align="center">
+  <p>Проект распространяется под лицензией <a href="LICENSE">MIT</a>. Подробная спецификация доступна в папке <a href="docs/">docs/</a>.</p>
+  <b>Developed with ❤️ by <a href="https://github.com/m1sstak3">Antigravity Studio (m1sstak3)</a> | 2026</b><br>
+  <i>Built with passion for the TON ecosystem and high-performance Web XR.</i>
+</div>
