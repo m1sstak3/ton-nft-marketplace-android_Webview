@@ -66,7 +66,7 @@
 ### 1. Подготовка
 Склонируйте репозиторий и установите зависимости:
 ```bash
-git clone [https://github.com/m1sstak3/ton-nft-marketplace.git](https://github.com/m1sstak3/ton-nft-marketplace.git)
+git clone https://github.com/m1sstak3/ton-nft-marketplace.git
 cd ton-nft-marketplace
 npm install
 ```
